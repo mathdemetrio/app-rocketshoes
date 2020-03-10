@@ -7,34 +7,35 @@ import Cart from './pages/Cart';
 
 const Stack = createStackNavigator();
 
-function RootStack() {
-  return (
-    <Stack.Navigator
-      initialRouteName="Home"
-      screenOptions={{
-        gestureEnabled: false,
-        headerBackTitleVisible: false,
-        headerTitleAlign: 'center',
-        headerStyle: {
-          backgroundColor: '#7159c1',
-        },
-        headerTintColor: '#ffffff',
-      }}
-    >
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{ title: 'Rocketshoes' }}
-      />
-      <Stack.Screen
-        name="Cart"
-        component={Cart}
-        // options={User.navigationOptions}
-      />
-    </Stack.Navigator>
-  );
-}
-
 export default function Routes() {
-  return <NavigationContainer>{RootStack()}</NavigationContainer>;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          gestureEnabled: false,
+          headerBackTitleVisible: false,
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#141419',
+          },
+          headerTintColor: '#ffffff',
+          cardStyle: {
+            backgroundColor: '#191920',
+          },
+        }}
+      >
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: 'Rocketshoes' }}
+        />
+        <Stack.Screen
+          name="Cart"
+          component={Cart}
+          // options={User.navigationOptions}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
