@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { darken } from 'polished';
 
 export const Container = styled.View`
   background: #191920;
@@ -34,6 +35,7 @@ export const Price = styled.Text`
 export const AddToCart = styled.TouchableOpacity`
   background: #7159c1;
   flex-direction: row;
+  align-items: center;
   color: #fff;
   border-radius: 4px;
   height: 42px;
@@ -44,23 +46,20 @@ export const ProductAmount = styled.View`
   justify-content: center;
   align-items: center;
   padding: 10px;
+  background: ${darken(0.03, '#7159c1')};
 `;
 
 export const ProductAmountText = styled.Text`
   font-size: 14px;
-  margin-left: 5px;
+  margin-left: 3px;
   color: #fff;
 `;
 
 export const TextAddCart = styled.Text`
   flex: 1;
-  flex-direction: row;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
   color: #fff;
   font-size: 14px;
   font-weight: bold;
-  line-height: 42px;
+  text-transform: uppercase;
 `;
