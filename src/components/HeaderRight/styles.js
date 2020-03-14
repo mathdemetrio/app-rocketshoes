@@ -13,7 +13,7 @@ export const BasketContainer = styled.TouchableOpacity`
 export const ItemCount = styled.Text`
   position: absolute;
   text-align: center;
-  top: 0px;
+  top: 12px;
   right: 1px;
   min-width: 18px;
   min-height: 18px;

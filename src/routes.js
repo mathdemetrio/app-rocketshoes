@@ -14,8 +14,7 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        headerRight="none"
-        headerTruncatedBackTitle="none"
+        // headerTruncatedBackTitle="none"
         // initialRouteName="Home"
         screenOptions={{
           gestureEnabled: false,
@@ -24,6 +23,7 @@ export default function Routes() {
           headerTitle: false,
           headerStyle: {
             backgroundColor: '#141419',
+            height: 80,
           },
           cardStyle: {
             backgroundColor: '#191920',
@@ -33,11 +33,7 @@ export default function Routes() {
         }}
       >
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen
-          name="Cart"
-          component={Cart}
-          // options={User.navigationOptions}
-        />
+        <Stack.Screen name="Cart" component={Cart} />
       </Stack.Navigator>
     </NavigationContainer>
   );
